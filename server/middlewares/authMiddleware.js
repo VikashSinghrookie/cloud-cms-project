@@ -13,7 +13,7 @@ module.exports = function(req, res, next) {
     // 3. Verify token
     try {
         const cleanToken = token.replace('Bearer ', '');
-        const decoded = jwt.verify(cleanToken, 'your_jwt_secret_key');
+        const decoded = jwt.verify(cleanToken, process.env.JWT_SECRET);
         req.user = decoded; 
         next(); 
     } catch (err) {
