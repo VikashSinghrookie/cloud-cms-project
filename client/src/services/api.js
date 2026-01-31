@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: 'http://localhost:5000/api', // Points to your Node server
+    baseURL: 'https://cloud-cms-project-1.onrender.com/api', // Points to your Node server
 });
 
 // Automatically add the Token to every request if we have one
